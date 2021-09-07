@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCogs,
@@ -7,6 +7,8 @@ import {
   faMobile,
 } from "@fortawesome/free-solid-svg-icons";
 const Services = (props) => {
+  useEffect(() => {}, []);
+
   return (
     <div ref={props.myRef} className="services">
       <div className="container">

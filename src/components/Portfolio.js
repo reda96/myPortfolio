@@ -153,15 +153,15 @@ const Pofrfolio = (props) => {
   const openPopupboxRecommend = () => {
     const content = (
       <>
-        <video width="320" height="220" controls autoPlay>
+        {/* <video width="320" height="220" controls autoPlay>
           <source src={recommendVideo} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
-        {/* <img
+        </video> */}
+        <img
           className="portfolio-image-popupbox"
           src={recommend}
           alt="Recommend Movie React and Redux Project..."
-        /> */}
+        />
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex cumque
           illo est expedita quos adipisci suscipit unde itaque qui perferendis.
