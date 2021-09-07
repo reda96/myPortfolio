@@ -12,33 +12,44 @@ body {
   font-family: "Roboto Condesed" sans-serif;
 }
 
-nav a.nav-link {
-  /* font-weight: 500; */
-  /* letter-spacing: 0.6px; */
-  cursor: pointer;
+/***********NAVBAR**********************/
+
+nav {
+  z-index: 2;
+}
+.logo {
+  width: 3rem;
+  height: 3rem;
+  background-color: "white";
 }
 
+/*------Menu links---------*/
+
+nav a.nav-link {
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
 nav ul li {
   text-transform: uppercase;
 }
+
 .navbar-nav > li > a {
-  font-size: 0.8rem;
-  margin-right: 12px;
-  margin-left: 12px;
-  color: white !important;
-  border-top: 3px solid rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: var(--primary-white) !important;
+  border-bottom: 0.1875rem solid var(--primary-dark) !important;
 }
-
 .navbar-brand {
-  max-width: 17.5rem;
-  padding: 0 !important;
-  /* height: 6rem; */
+  max-width: 17.25rem;
+  padding: 0;
 }
-
 .navbar-nav > li > a.active,
-.navbar-nav > li > a.active:focus,
+.navbar-nav > li > a.active:focus {
+  border-bottom: 0.187rem solid var(--primary-orange) !important;
+}
 .navbar-nav > li > a:hover {
-  border-top: 3px solid #f9ab00;
+  border-bottom: 0.187rem solid var(--primary-orange) !important;
 }
 
 /************************ HEADER *********************************/

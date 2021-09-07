@@ -2,7 +2,8 @@ import React from "react";
 import netflix from "../netflix.png";
 import cityGuide from "../city-guide-app.png";
 import portfolio from "../portfolio.png";
-import taskManager from "../task-manager.png";
+import recommend from "../recommend.PNG";
+import recommendVideo from "../2021-09-07-1129-17.mp4";
 // FONTAWESOME IMPORTS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +11,7 @@ import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
 import { PopupboxManager, PopupboxContainer } from "react-popupbox";
 import "react-popupbox/dist/react-popupbox.css";
 
-const Pofrfolio = () => {
+const Pofrfolio = (props) => {
   // Netflix
   const openPopupboxNetflix = () => {
     const content = (
@@ -149,14 +150,18 @@ const Pofrfolio = () => {
   };
 
   // Task Manager React and Redux Project
-  const openPopupboxTaskManager = () => {
+  const openPopupboxRecommend = () => {
     const content = (
       <>
-        <img
+        <video width="320" height="220" controls autoPlay>
+          <source src={recommendVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* <img
           className="portfolio-image-popupbox"
-          src={taskManager}
-          alt="Task Manager React and Redux Project..."
-        />
+          src={recommend}
+          alt="Recommend Movie React and Redux Project..."
+        /> */}
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex cumque
           illo est expedita quos adipisci suscipit unde itaque qui perferendis.
@@ -165,23 +170,23 @@ const Pofrfolio = () => {
         <a
           className="hyper-link"
           onClick={() =>
-            window.open(
-              "https://react-redux-task-manager.herokuapp.com/",
-              "_blank"
-            )
+            window.open("https://cryptic-harbor-56450.herokuapp.com/", "_blank")
           }
         >
-          https://react-redux-task-manager.herokuapp.com/
+          https://cryptic-harbor-56450.herokuapp.com/
         </a>
         <br />
         <b>GitHub:</b>{" "}
         <a
           className="hyper-link"
           onClick={() =>
-            window.open("https://github.com/8020Coding/task-manager", "_blank")
+            window.open(
+              "https://github.com/reda96/recommendation_app",
+              "_blank"
+            )
           }
         >
-          https://github.com/8020Coding/task-manager
+          https://github.com/reda96/recommendation_app
         </a>
       </>
     );
@@ -198,7 +203,7 @@ const Pofrfolio = () => {
   };
 
   return (
-    <div className="portfolio-wrapper">
+    <div ref={props.myRef} className="portfolio-wrapper">
       <div className="container">
         <h1 className="text-uppercase text-center py-5">portfolio</h1>
         <div className="image-box-wrapper row justify-content-center">
@@ -216,6 +221,22 @@ const Pofrfolio = () => {
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
           {/* - */}
+
+          {/* - */}
+          <div
+            className="portfolio-image-box"
+            style={{ width: "auto" }}
+            onClick={openPopupboxRecommend}
+          >
+            <img
+              className="portfolio-image"
+              src={recommend}
+              alt="Recommend Movies React and Redux Project..."
+              style={{ paddingBottom: "7px", paddingTop: "7px" }}
+            />
+            <div className="overflow"></div>
+            <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
+          </div>
           <div
             className="portfolio-image-box"
             style={{ width: "auto" }}
@@ -243,26 +264,12 @@ const Pofrfolio = () => {
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
-          {/* - */}
-          <div
-            className="portfolio-image-box"
-            style={{ width: "auto" }}
-            onClick={openPopupboxTaskManager}
-          >
-            <img
-              className="portfolio-image"
-              src={taskManager}
-              alt="Task Manager React and Redux Project..."
-            />
-            <div className="overflow"></div>
-            <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
-          </div>
         </div>
       </div>
       <PopupboxContainer {...popupboxConfigNetflix} />
       <PopupboxContainer {...popupboxConfigCityGuide} />
       <PopupboxContainer {...popupboxConfigPortfolio} />
-      <PopupboxContainer {...popupboxConfigTaskManager} />
+      <PopupboxContainer {...openPopupboxRecommend} />
     </div>
   );
 };

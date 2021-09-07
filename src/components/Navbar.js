@@ -1,51 +1,59 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
       <div className="container">
-        <a className="navbar-brand" href="#">
-          Navbar
+        <a className="navbar-brand" href="www.wilsoncoelho.com">
+          <span style={{ color: "white" }}>A</span>hmed
         </a>
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          style={{ outline: "none" }}
         >
-          <FontAwesomeIcon icon={faBars} style={{ color: "white" }} />
+          <FontAwesomeIcon style={{ color: "#fff" }} icon={faBars} />
         </button>
+
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link " aria-current="page" href="#">
-                Home
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">
+                Home <span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                About
+              <a className="nav-link" onClick={() => props.scroll("About")}>
+                About Me
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                services
+
+            <li className="nav-item active">
+              <a
+                className="nav-link"
+                onClick={() => props.scroll("Experience")}
+              >
+                Experience <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                portfolio
+            <li className="nav-item active">
+              <a className="nav-link" onClick={() => props.scroll("Portfolio")}>
+                Portfolio <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li className="nav-item">
+            <li className="nav-item active">
+              <a className="nav-link" onClick={() => props.scroll("Skills")}>
+                Skills <span className="sr-only">(current)</span>
+              </a>
+            </li>
+            <li className="nav-item active">
               <a className="nav-link" href="#">
-                contacts
+                Contact <span className="sr-only">(current)</span>
               </a>
             </li>
           </ul>

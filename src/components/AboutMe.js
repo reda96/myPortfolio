@@ -1,8 +1,9 @@
 import React from "react";
 import author from "../avatar-2.png";
-const AboutMe = () => {
+const AboutMe = (props) => {
+  console.log(props);
   return (
-    <div className="container py-5">
+    <div ref={props.myRef} className="container py-5">
       <div className="row">
         <div className="col-lg-6 col-xm-12">
           <div className="photo-wrap mb-5">

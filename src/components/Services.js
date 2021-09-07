@@ -6,9 +6,9 @@ import {
   faFileCode,
   faMobile,
 } from "@fortawesome/free-solid-svg-icons";
-const Services = () => {
+const Services = (props) => {
   return (
-    <div className="services">
+    <div ref={props.myRef} className="services">
       <div className="container">
         <h1 className="py-5">Skills</h1>
         <div className="row">

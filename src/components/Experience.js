@@ -1,8 +1,8 @@
 import React from "react";
 
-const Experience = () => {
+const Experience = (props) => {
   return (
-    <div className="experience">
+    <div ref={props.myRef} className="experience">
       <div className="d-flex justify-content-center my-5">
         <h1>experience</h1>
       </div>
@@ -10,13 +10,10 @@ const Experience = () => {
         <div className="timeline-block timeline-block-right">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h3>2014-2015</h3>
+            <h3>2013-2018:June</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-              omnis laboriosam odio deserunt reprehenderit optio cum ratione
-              sequi pariatur deleniti iste perspiciatis officiis minima iusto
-              hic, ipsa ea dicta velit! Quos, placeat ratione. Sunt cumque
-              delectus asperiores et quas qui.
+              Studing Computer Engineer i German University in Cairo and I have
+              Bachelor degree and have been graduated with GPA: B+
             </p>
           </div>
         </div>
@@ -24,13 +21,10 @@ const Experience = () => {
         <div className="timeline-block timeline-block-left">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h3>2014-2015</h3>
+            <h3>2018:July-2018:September</h3>
             <p>
-              <b>Lorem ipsum dolor sit amet consectetur</b>, adipisicing elit.
-              Sit omnis laboriosam odio deserunt reprehenderit optio cum ratione
-              sequi pariatur deleniti iste perspiciatis officiis minima iusto
-              hic, ipsa ea dicta velit! Quos, placeat ratione. Sunt cumque
-              delectus asperiores et quas qui.
+              I have a remotely internship as Frontend development using Recat
+              and React Native. I was working on a language-learning App
             </p>
           </div>
         </div>
@@ -38,13 +32,10 @@ const Experience = () => {
         <div className="timeline-block timeline-block-right">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h3>2015-2016</h3>
+            <h3>2018:October-2021:April</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-              omnis laboriosam odio deserunt reprehenderit optio cum ratione
-              sequi pariatur deleniti iste perspiciatis officiis minima iusto
-              hic, ipsa ea dicta velit! Quos, placeat ratione. Sunt cumque
-              delectus asperiores et quas qui.
+              Doing my military service as a reserve officer. I was working in
+              Network engineering during this period
             </p>
           </div>
         </div>
@@ -52,44 +43,11 @@ const Experience = () => {
         <div className="timeline-block timeline-block-left">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h3>2016-2017</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-              omnis laboriosam odio deserunt reprehenderit optio cum ratione
-              sequi pariatur deleniti iste perspiciatis officiis minima iusto
-              hic, ipsa ea dicta velit! Quos, placeat ratione. Sunt cumque
-              delectus asperiores et quas qui.
-            </p>
+            <h3>2021:may-Now</h3>
+            <p>Working as a web developer freelancer</p>
           </div>
         </div>
-        {/* - */}
-        <div className="timeline-block timeline-block-right">
-          <div className="marker"></div>
-          <div className="timeline-content">
-            <h3>2017-2018</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-              omnis laboriosam odio deserunt reprehenderit optio cum ratione
-              sequi pariatur deleniti iste perspiciatis officiis minima iusto
-              hic, ipsa ea dicta velit! Quos, placeat ratione. Sunt cumque
-              delectus asperiores et quas qui.
-            </p>
-          </div>
-        </div>
-        {/* - */}
-        <div className="timeline-block timeline-block-left">
-          <div className="marker"></div>
-          <div className="timeline-content">
-            <h3>2018-2020</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-              omnis laboriosam odio deserunt reprehenderit optio cum ratione
-              sequi pariatur deleniti iste perspiciatis officiis minima iusto
-              hic, ipsa ea dicta velit! Quos, placeat ratione. Sunt cumque
-              delectus asperiores et quas qui.
-            </p>
-          </div>
-        </div>
+        {/* - */}>
       </div>
     </div>
   );
